@@ -8,15 +8,14 @@ As I didn't manage to get working the genuine screensaver, I wrote this small ki
 ## downsides:
 It's only a workaround – a simple kivy window/app that sets the timer to zero every time it registrates a motion on this window. That means, the timer continues if this window is covered by another app (or minimized) and blanks the screen even when you're working on it. It's no problem to reactivate the screen, as a simple touch is enough to switch it on again. But later, before you leave the screen, this app has to be in front and reset by a touch, otherwise the timer continues above the threshold (e.g. 356/20) and doesn't reach it again (and therefore doesn't blank the screen).
 
-## Used hardware and software:
+## used hardware and software:
 Python version 3.11<br>
 Kivy version 2.2.1<br>
 Raspberry Pi 4 with Debian GNU/Linux 11 (bullseye)<br>
-window manager X<br>
 4.3" touchscreen (DSI)<br>
 
 ## what worked for me:
-I packaged the code with pyinstaller this way: 
+To make an executable app from the code that can be easily started by simply clicking on it, I packaged the code with pyinstaller this way: 
 - open the terminal in the folder where the code is saved (or open the terminal anywhere and go there with the cd keyword)
 - type in the terminal:
 pyinstaller my_code_to_package.py
