@@ -1,12 +1,12 @@
 
-# screen blanking app for kivy apps on Raspbery Pi 
+# screen blanking app for kivy apps on Raspberry Pi 
 
 Quick and dirty screensaver solution to force the screen on the Raspberry Pi to blanking mode (because – at least in my case – the kivy app suppresses the normal functioning of the Raspi's screensaver).<br>
 
-As I didn't manage to get working the genuine screensaver, I wrote this small kivy app as a quick workaround. It opens a window on which sreen motions (mouse or touch) are detected and which forces the screen to blank mode after a certain time of inactivity.
+As I didn't manage to get working the genuine screensaver, I wrote this small kivy app as a quick workaround. It opens a window on which screen motions (mouse or touch) are detected and which forces the screen to blank mode after a certain time of inactivity.
 
 ## downsides:
-It's only a workaround – a simple kivy window/app that sets the timer to zero every time it registrates a motion on this window. That means, the timer continues if this window is covered by another app (or minimized) and blanks the screen even when you're working on it. It's no problem to reactivate the screen, as a simple touch is enough to switch it on again. But later, before you leave the screen, this app has to be in front and reset by a touch, otherwise the timer continues above the threshold (e.g. 356/20) and doesn't reach it again (and therefore doesn't blank the screen).
+It's only a workaround – a simple kivy window/app that sets the timer to zero every time it registers a motion on this window. That means, the timer continues if this window is covered by another app (or minimized) and blanks the screen even when you're working on it. It's no problem to reactivate the screen, as a simple touch is enough to switch it on again. But later, before you leave the screen, this app has to be in front and reset by a touch, otherwise the timer continues above the threshold (e.g. 356/20) and doesn't reach it again (and therefore doesn't blank the screen).
 
 ## used hardware and software:
 Python version 3.11<br>
